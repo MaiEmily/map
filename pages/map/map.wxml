@@ -1,0 +1,47 @@
+<!--pages/map/map.wxml-->
+<view class='map'>
+  <view class='search pRelative'>
+    <icon class='iconfont icon-icon--'></icon>
+    <input type='text' placeholder='搜索' bindinput="bindKeyInput" value='{{searchCon}}'></input>
+  </view>
+  <view class='section'>
+    <map id="myMap" 
+    latitude="{{latitude}}" 
+    longitude="{{longitude}}" 
+    scale="{{scale}}" 
+    markers="{{markers}}" 
+    covers="{{covers}}" 
+    bindcontroltap="controltap"
+    bindmarkertap="markertap"
+    bindregionchange="regionchange"
+    show-location >
+    <cover-view class="searchCon">
+      <cover-view class='searchCon-item' wx:for="{{searchResult}}" wx:key="unique" data-value="{{item}}" bindtap='tapSearchResult'>
+        <cover-view class='iconfont icon-icon--'></cover-view>
+        <cover-view class='addressname'>
+          {{item.name}}
+          <cover-view>{{item.province+item.city+item.district}}</cover-view>
+        </cover-view>
+      </cover-view>     
+    </cover-view>  
+    <cover-view class='mapPic'>
+      <cover-image src='../../../../public/image/location.png'></cover-image>
+    </cover-view>
+    </map>
+  </view>
+  <view class='footer'>
+    <view>
+      <text>地址：</text>
+      <text>{{address}}</text>
+    </view>
+    <view>
+      <text>经度：</text>
+      <text>{{longitude}}</text>
+    </view>
+    <view>
+      <text>纬度：</text>
+      <text>{{latitude}}</text>
+    </view>
+  </view>
+</view>
+<!--  -->

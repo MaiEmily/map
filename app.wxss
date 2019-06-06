@@ -1,0 +1,10 @@
+/**app.wxss**/
+@import './public/iconfont/iconfont.wxss';
+page{
+  /* background-color: #edf1f5; */
+  height:100%;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;  
+  -moz-osx-font-smoothing: grayscale; 
+  color: #333;
+}

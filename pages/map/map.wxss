@@ -1,0 +1,101 @@
+/* pages/map/map.wxss */
+.map{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 34rpx;
+}
+
+.search{
+  width: 100%;
+  height: 8%;
+  padding:0 25rpx;
+  display: flex;
+  align-items: center;
+  background: #eaeaea;
+  box-sizing: border-box;
+}
+.search icon{
+  position: absolute;
+  left: 35rpx;
+  font-size: 36rpx;
+  display: flex;
+  align-items: flex-end;
+}
+.search input{
+  width: 100%;
+  height: 70rpx;
+  line-height: 40rpx;
+  border: 1px solid #E6E5EA;
+  background: #fff;
+  border-radius: 5px;
+  font-size: 32rpx;
+  padding-left: 50rpx;
+  box-sizing: border-box;
+}
+.section{
+  height: 70%; 
+}
+map{
+   width: 100%; 
+   height: 100%; 
+}
+.searchCon{
+  position: relative;
+  z-index: 100;
+  background: #fff;
+  margin: 0  25rpx;
+}
+.searchCon-item{
+  display: flex;
+  padding: 20rpx;
+  text-overflow: ellipsis;
+}
+.searchCon-item .iconfont{
+  font-size: 32rpx;
+  min-width:6%;
+}
+.addressname{
+  display: flex;
+  padding-left: 10rpx;
+  text-overflow: ellipsis;
+  
+}
+.addressname  cover-view{
+  color: #999;
+  font-size: 30rpx;
+  padding-left: 10rpx;
+  text-overflow: ellipsis;
+}
+.mapPic{
+  position: absolute;
+  top: -71rpx;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width:60rpx;
+  height:60rpx;
+  /* background: #000; */
+  
+}
+.mapPic cover-image{
+  width: 100%;
+}
+.footer{
+  height: 19%;
+  padding:10rpx;
+}
+.footer>view:not(:last-of-type){
+  padding-bottom: 5rpx;
+}
+.footer>view{
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer>view text:nth-of-type(1){
+  width: 15%;
+}
+.footer>view text:nth-of-type(2){
+  width: 85%;
+}
