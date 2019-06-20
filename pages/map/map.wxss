@@ -51,9 +51,14 @@ map{
   padding: 20rpx;
   text-overflow: ellipsis;
 }
-.searchCon-item .iconfont{
+.searchCon-item .searchIcon{
   font-size: 32rpx;
   min-width:6%;
+  width:6%;
+
+}
+.searchCon-item .searchIcon cover-image{
+  width: 100%;
 }
 .addressname{
   display: flex;

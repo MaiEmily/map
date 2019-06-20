@@ -15,18 +15,23 @@
     bindmarkertap="markertap"
     bindregionchange="regionchange"
     show-location >
-    <cover-view class="searchCon">
-      <cover-view class='searchCon-item' wx:for="{{searchResult}}" wx:key="unique" data-value="{{item}}" bindtap='tapSearchResult'>
-        <cover-view class='iconfont icon-icon--'></cover-view>
-        <cover-view class='addressname'>
-          {{item.name}}
-          <cover-view>{{item.province+item.city+item.district}}</cover-view>
-        </cover-view>
-      </cover-view>     
-    </cover-view>  
-    <cover-view class='mapPic'>
-      <cover-image src='../../../../public/image/location.png'></cover-image>
-    </cover-view>
+      <cover-view class='mapPic'>
+        <cover-image src='../../../../public/image/location.png'></cover-image>
+      </cover-view>
+      <!-- 搜索结果列表 -->
+      <cover-view class="searchCon">
+        <cover-view class='searchCon-item' wx:for="{{searchResult}}" wx:key="unique" data-value="{{item}}" bindtap='tapSearchResult'>
+          <!-- <cover-view class='iconfont icon-icon--'></cover-view> -->
+          <cover-view class='searchIcon'>
+            <cover-image src='../resource/searchIcon.png'></cover-image>
+          </cover-view>
+          <cover-view class='addressname'>
+            {{item.name}}
+            <cover-view>{{item.province+item.city+item.district}}</cover-view>
+          </cover-view>
+        </cover-view>     
+      </cover-view>  
+    
     </map>
   </view>
   <view class='footer'>
